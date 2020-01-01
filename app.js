@@ -11,4 +11,8 @@ const routes = require('./routes');
 app.use(express.json());
 app.use(routes);
 
-app.listen(3000)
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log('server listening at port: ' + port);
+});
